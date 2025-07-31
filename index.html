@@ -688,6 +688,23 @@
             padding: 20px;
         }
 
+        .progress-bars-container {
+            position: relative;
+            z-index: 10;
+            isolation: isolate;
+        }
+
+        .chart-container.trust-damagers-container {
+            height: 780px;
+        }
+
+        /* Mobile responsive for trust damagers container */
+        @media (max-width: 479px) {
+            .chart-container.trust-damagers-container {
+                height: 480px;
+            }
+        }
+
         .data-summary {
             background: #f8f9fa;
             border-radius: 8px;
@@ -2408,11 +2425,11 @@
                 <p style="color: #666; font-size: 24px; margin-bottom: 40px;">
                     Q1 2025 | North American Investors | Reputation Intelligence
                 </p>
-                <div class="executive-summary">
-                    <h4>Low-Carbon Investment Positioning Assessment</h4>
-                    <p style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-                        <strong>Positioning Goal:</strong> Establish ADNOC as a "credible low-carbon investment opportunity" for North American institutional investors. This review analyzes investor reactions to ADNOC's transition efforts through media coverage, direct engagement, sentiment tracking, and behavioral indicators tied to low-carbon credibility.
-                    </p>
+                    <div class="executive-summary">
+                        <h4>North American Investor Intelligence</h4>
+                        <p style="color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                            Quarterly analysis focused specifically on establishing ADNOC as a credible low-carbon investment opportunity for institutional investors. Combines investor surveys, media analysis, and competitive benchmarking to deliver actionable insights for North American market penetration.
+                        </p>
                     <div class="summary-grid">
                         <div class="summary-metric">
                             <div class="summary-value">74</div>
@@ -3140,7 +3157,7 @@
                     Trust Damagers - Risk Escalation Analysis
                 </h3>
                 
-                <div class="chart-container" style="height: 580px;">
+                <div class="chart-container trust-damagers-container">
                     <div class="chart-title">Forward Risk Indicators | Q4 2024 → Q1 2025 Escalation</div>
                     <canvas id="trustDamagersChart" width="400" height="300"></canvas>
                 </div>
@@ -5757,11 +5774,11 @@
 
             // Forward Risk Indicators Data
             const riskData = [
-                { theme: 'Carbon Capture Implementation', q4: 18, q1: 31, risk: 'HIGH', priority: 1 },
-                { theme: 'Regional Stability Concerns', q4: 22, q1: 28, risk: 'HIGH', priority: 2 },
-                { theme: 'ESG Transparency Gaps', q4: 9, q1: 18, risk: 'MEDIUM', priority: 3 },
-                { theme: 'Sustainability Claims Scrutiny', q4: 12, q1: 27, risk: 'MEDIUM', priority: 4 },
-                { theme: 'Technology Leadership Visibility', q4: 14, q1: 26, risk: 'MEDIUM', priority: 5 }
+                { theme: 'Carbon Capture Implementation Delays', q4: 18, q1: 31, risk: 'HIGH', priority: 1 },
+                { theme: 'Regional Political Uncertainty', q4: 22, q1: 28, risk: 'HIGH', priority: 2 },
+                { theme: 'ESG Audit Transparency Gaps', q4: 9, q1: 18, risk: 'MEDIUM', priority: 3 },
+                { theme: 'Greenwashing Allegations', q4: 12, q1: 27, risk: 'MEDIUM', priority: 4 },
+                { theme: 'Clean Tech Visibility Gaps', q4: 14, q1: 26, risk: 'MEDIUM', priority: 5 }
             ];
 
             // Sort by Q1 values for visual hierarchy
